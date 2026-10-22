@@ -5,7 +5,7 @@
 An independent, fictional prototype exploring how construction procurement teams could create purchase orders, monitor deliveries, compare suppliers and investigate pricing anomalies. All names, order records and prices are synthetic.
 
 ## Why this product?
-Procurement coordinators working across multiple construction sites may struggle to track supplier commitments and identify overdue materials across fragmented systems. BuildFlow explores an exception-first workflow, with a product specification, prioritization decisions and testable metrics. The problem hypotheses have **not yet been validated by interviews**.
+Procurement coordinators working across multiple construction sites may struggle to track supplier commitments and identify overdue materials across fragmented systems. BuildFlow explores an exception-first workflow, with a product specification, prioritization decisions and testable metrics.
 
 ## Features
 - **Command centre:** spend, order volume, active overdue orders, historical late deliveries, on-time performance and material breakdowns
