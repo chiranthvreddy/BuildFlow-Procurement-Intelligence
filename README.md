@@ -44,6 +44,8 @@ A public deployment URL is **not yet verified**.
 | [QA plan](docs/QA_PLAN.md) | Manual UAT and release checks |
 | [Case study](docs/CASE_STUDY.md) | Problem, decisions, implementation and limitations |
 | [Architecture](docs/ARCHITECTURE.md) | System diagram and data flow |
+| [Demo script](docs/DEMO_SCRIPT.md) | Two-minute guided walkthrough |
+| [Interview guide](docs/INTERVIEW_GUIDE.md) | Product interview questions and defensible answers |
 
 ## Tests
 ```bash
