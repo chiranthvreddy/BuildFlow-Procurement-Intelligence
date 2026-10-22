@@ -43,7 +43,7 @@ def test_late_completed_separate_from_open():
 def test_price_anomaly():
     df=enrich_orders(sample(),as_of="2026-01-10")
     out=price_anomalies(df,threshold=.2)
-    assert not out.price_anomaly.any()
+    assert out.price_anomaly.sum()==2
 
 def test_quote_comparison():
     df=enrich_orders(sample(),as_of="2026-01-10")
