@@ -1,0 +1,21 @@
+order_id,supplier,material,quantity,unit_price,promised_date,delivered_date,status,created_date,site
+PO-10001,MetroBuild Traders,Cement (bags),134,323.95,2026-11-03,,Confirmed,2026-10-19,Whitefield Tower
+PO-10002,Apex Materials,Bricks (units),35,7.47,2026-10-24,,Confirmed,2026-10-11,HSR Commercial
+PO-10003,Eastline Aggregates,Bricks (units),379,9.72,2026-08-10,2026-08-18,Delivered,2026-08-06,HSR Commercial
+PO-10004,MetroBuild Traders,Aggregate (tonnes),377,1153.57,2026-08-16,,Placed,2026-08-08,Sarjapur Residences
+PO-10005,Prime Cement Co,TMT Steel (kg),69,59.18,2026-10-11,2026-10-09,Delivered,2026-09-25,Sarjapur Residences
+PO-10006,Nandi Infrastructure,Bricks (units),83,11.87,2026-10-05,2026-10-09,Delivered,2026-09-19,Electronic City Campus
+PO-10007,SolidStone Supply,Cement (bags),315,329.23,2026-08-21,,In Transit,2026-08-13,Whitefield Tower
+PO-10008,MetroBuild Traders,Cement (bags),71,348.01,2026-08-06,2026-08-04,Delivered,2026-07-30,Electronic City Campus
+PO-10009,SolidStone Supply,Sand (tonnes),379,1849.32,2026-10-11,2026-10-18,Delivered,2026-10-02,Whitefield Tower
+PO-10010,MetroBuild Traders,Bricks (units),256,8.9,2026-08-08,2026-08-08,Delivered,2026-08-02,HSR Commercial
+PO-10011,Apex Materials,Sand (tonnes),432,1352.36,2026-07-23,2026-07-23,Delivered,2026-07-07,Sarjapur Residences
+PO-10012,SolidStone Supply,Cement (bags),128,375.54,2026-10-13,,In Transit,2026-09-25,Electronic City Campus
+PO-10013,Nandi Infrastructure,Aggregate (tonnes),295,1057.64,2026-10-12,2026-10-20,Delivered,2026-10-04,Electronic City Campus
+PO-10014,Nandi Infrastructure,Bricks (units),272,7.45,2026-09-10,2026-09-09,Delivered,2026-09-01,Whitefield Tower
+PO-10015,Prime Cement Co,Cement (bags),325,316.35,2026-10-17,,In Transit,2026-10-03,Electronic City Campus
+PO-10016,Apex Materials,Bricks (units),368,10.6,2026-09-05,2026-09-10,Delivered,2026-08-24,Sarjapur Residences
+PO-10017,Apex Materials,Sand (tonnes),389,1800.68,2026-10-16,2026-10-20,Delivered,2026-10-08,Sarjapur Residences
+PO-10018,Eastline Aggregates,Bricks (units),172,11.21,2026-07-23,2026-07-21,Delivered,2026-07-17,HSR Commercial
+PO-10019,Apex Materials,TMT Steel (kg),326,58.48,2026-09-21,2026-09-26,Delivered,2026-09-05,Whitefield Tower
+PO-10020,MetroBuild Traders,Cement (bags),49,334.09,2026-09-24,,Confirmed,2026-09-06,Whitefield Tower
