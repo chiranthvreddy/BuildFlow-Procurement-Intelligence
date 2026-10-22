@@ -1,46 +1,40 @@
-# BuildFlow — Product Requirements Document (PRD)
-**Version:** 1.0 | **Stage:** Independent portfolio prototype | **Primary user:** Construction procurement coordinator
+# BuildFlow — Product Requirements Document
+**Version 2.0 · Independent portfolio prototype · October 2026**
 
-## Problem statement
-Procurement teams often track purchase orders, suppliers and delivery commitments across fragmented tools. Finding overdue orders and comparing supplier delivery reliability may require manual reconciliation. This is a product hypothesis, not a validated customer finding.
+## Problem hypothesis
+Construction procurement coordinators working across multiple sites may struggle to monitor purchase orders, spot overdue commitments and compare suppliers when information is fragmented. This hypothesis requires actual user validation.
 
-## Opportunity and user jobs
-- As a procurement coordinator, I want to filter orders by site, material and status so I can quickly identify commitments requiring follow-up.
-- As a site manager, I want to see delivery exceptions before they disrupt material planning.
-- As a category buyer, I want to compare supplier performance and spend so I can assess options beyond quoted unit price.
+## Primary personas
+- Procurement coordinator: needs an exception-first view and a way to follow up on orders.
+- Site manager: needs material-delivery visibility.
+- Category buyer: needs indicative supplier cost and reliability comparisons.
 
-## Goals
-1. Enable users to identify overdue open orders within two minutes in a moderated usability test.
-2. Display procurement spend, open orders, exception count and completed-delivery on-time rate.
-3. Export a filtered follow-up list.
-4. Support supplier-level comparison of historical delivery performance.
+## Jobs to be done
+1. When reviewing the morning backlog, identify overdue orders and their suppliers.
+2. When requesting materials, estimate supplier cost and consider delivery reliability.
+3. When a supplier confirms dispatch, update an order status and record a follow-up note.
+4. When a price looks unusual, understand why it was flagged and whether the difference is legitimate.
 
-## MVP scope
-**Included:** Read-only dashboard; site/material/status filtering; supplier scorecard; overdue/late flags; CSV export; input validation; synthetic demonstration data.
-**Excluded:** Authentication, purchase-order creation, transactions, supplier messaging, live delivery tracking, predictive AI, ERP integrations.
-
-## Functional requirements
-| ID | Requirement | Acceptance criteria |
+## MVP functional requirements
+| ID | Feature | Acceptance criteria |
 |---|---|---|
-| F1 | Read orders CSV | Valid CSV loads; missing mandatory fields show useful validation error |
-| F2 | Filter order list | Changing site/material/status updates both rows and aggregate KPIs |
-| F3 | Show operational KPIs | Order count, spend, open orders, exception count, on-time rate and lead time are recalculated |
-| F4 | Flag exceptions | Open order past promised date is overdue; completed order after promised date is late |
-| F5 | Compare suppliers | Spend and completed-delivery on-time rates appear by supplier; suppliers with no completed orders display N/A |
-| F6 | Export | Download contains currently filtered orders |
+| F1 | Command centre | Display spend, open, overdue, historically late and completed on-time metrics |
+| F2 | Filters | Site, material and status filters update dashboard and order register |
+| F3 | Order creation | Valid supplier, material, quantity, price and promised date create a unique session order |
+| F4 | Status management | Status updates reject delivery dates before order creation; notes remain in session |
+| F5 | Supplier comparison | Show historical median price × requested quantity and completed-delivery rate |
+| F6 | Price intelligence | Flag orders whose unit price differs from material median beyond adjustable threshold |
+| F7 | Export/import | Export filtered orders; validate uploaded CSV schema and dates |
+| F8 | Research instrumentation | Log demo interactions locally without pretending they are real telemetry |
+
+## Product constraints and tradeoffs
+The prototype uses Streamlit session state instead of a database for speed and clarity; data will not persist across sessions. Median prices are not live supplier quotes. The anomaly rule is not a trained model. Open overdue and historically late completed orders must be reported separately.
+
+## Out of scope
+Authentication, persistent multi-user workflows, real-time supplier integration, payments, partial deliveries, ERP integration, real predictive AI, mobile-native app.
 
 ## Nonfunctional expectations
-- Input data must be clearly labeled as synthetic.
-- Invalid and duplicate order IDs must be rejected.
-- Dates must be parsed and checked for consistency.
-- Metrics must avoid dividing by zero and differentiate completed orders from open orders.
-- Responsiveness and accessibility require browser-level testing before any production claims.
+Readable data definitions, deterministic demo data, automated KPI tests, clear error messages and accessible responsive UI (manual verification pending).
 
-## Edge cases
-No rows after filtering; no deliveries for a supplier; malformed dates; duplicated IDs; zero/negative quantity; missing delivery timestamp on a delivered order.
-
-## Risks and open questions
-Are promised dates trustworthy? Do partial deliveries exist? What constitutes a critical order? Is the cost of a late shipment dependent on site schedule? These need stakeholder discovery before deployment.
-
-## Release gate
-Automated tests pass, manual UAT checklist executed, usability feedback collected, and data definitions reviewed with domain stakeholders.
+## Release criteria
+CI tests passing, browser UAT completed, three representative user sessions conducted, observed findings documented, and demo URL verified.
