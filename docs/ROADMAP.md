@@ -1,26 +1,28 @@
-# Product prioritization and roadmap
+# Roadmap and prioritization
 
-**RICE scores are illustrative assumptions**, not measured demand. Formula: Reach × Impact × Confidence / Effort.
+RICE values below are **illustrative assumptions**, not validated estimates. RICE = Reach × Impact × Confidence / Effort.
 
-| Candidate feature | Reach | Impact | Confidence | Effort | RICE |
-|---|---:|---:|---:|---:|---:|
-| Late-order visibility | 80 | 2.0 | 0.7 | 2 | 56 |
-| Site and status filters | 70 | 1.5 | 0.8 | 2 | 42 |
-| Supplier scorecard | 45 | 2.0 | 0.6 | 3 | 18 |
-| Automated supplier reminders | 60 | 2.0 | 0.4 | 6 | 8 |
-| AI price anomaly alerts | 30 | 1.5 | 0.3 | 6 | 2.25 |
+| Feature | Reach | Impact | Confidence | Effort | RICE | State |
+|---|---:|---:|---:|---:|---:|---|
+| Overdue order queue | 80 | 2.0 | 0.7 | 2 | 56 | Prototype |
+| Site/material filters | 70 | 1.5 | 0.8 | 2 | 42 | Prototype |
+| Supplier scorecard | 45 | 2.0 | 0.6 | 3 | 18 | Prototype |
+| Order creation and status workflow | 50 | 1.5 | 0.5 | 3 | 12.5 | Prototype |
+| Price anomaly rule | 30 | 1.5 | 0.5 | 3 | 7.5 | Prototype |
+| Supplier notifications | 60 | 2.0 | 0.4 | 6 | 8 | Proposed |
+| AI forecasting | 30 | 1.5 | 0.3 | 6 | 2.25 | Proposed |
 
-## Phase 1 — Prototype (implemented)
-Read-only order dashboard, supplier metrics, filtering, CSV export and exception flag logic.
+## Now — MVP demonstration
+Create/update orders in session, identify active exceptions, compare suppliers, investigate price outliers, export filtered data.
 
-## Phase 2 — Customer validation (proposed)
-Interviews, usability research, validated delivery-data definitions, critical-material segmentation and stakeholder feedback.
+## Next — Validation
+Interview actual procurement professionals, test usability, define material criticality, verify purchasing workflows and refine RICE assumptions.
 
-## Phase 3 — Workflow capabilities (proposed)
-Assignment of exception owners, notes and follow-up history, real integrations, role-based permissions.
+## Later — Production foundations
+Persistent relational database, authentication, role permissions, audit logs, procurement APIs, partial deliveries and data quality monitoring.
 
-## Phase 4 — Decision intelligence (proposed)
-Forecasting, anomaly detection, supplier optimization and explainable recommendations after enough reliable historical data exists.
+## Future — Decision intelligence
+Predictive lead times and explainable anomaly models only after collecting representative, permissioned historical data.
 
-## Key tradeoff
-Start with understandable operational visibility instead of complex AI. Data quality and process ownership are prerequisites for dependable automation.
+## Decision principle
+Solve the operational visibility problem first; add automation only when data and customer research support it.
