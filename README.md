@@ -1,8 +1,8 @@
 # BuildFlow — Construction Procurement Intelligence
 
-**Product Management case study + interactive B2B procurement workspace**
+**An independent passion project exploring better construction procurement workflows**
 
-An independent, fictional prototype exploring how construction procurement teams could create purchase orders, monitor deliveries, compare suppliers and investigate pricing anomalies. All names, order records and prices are synthetic.
+I built BuildFlow as a personal exploration of how software can simplify construction-material purchasing. It is a fictional prototype exploring how construction procurement teams could create purchase orders, monitor deliveries, compare suppliers and investigate pricing anomalies. All names, order records and prices are synthetic.
 
 ## Why this product?
 Procurement coordinators working across multiple construction sites may struggle to track supplier commitments and identify overdue materials across fragmented systems. BuildFlow explores an exception-first workflow, with a product specification, prioritization decisions and testable metrics.
