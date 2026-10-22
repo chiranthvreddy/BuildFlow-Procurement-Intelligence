@@ -1,34 +1,54 @@
 # BuildFlow — Construction Procurement Intelligence
 
-**Independent Product Management case study and working Streamlit prototype** for B2B construction-material procurement. This project is not affiliated with any real construction supplier.
+**Product Management case study + interactive B2B procurement workspace**
 
-## Problem
-Construction procurement teams need to compare suppliers, monitor orders, identify delayed deliveries, and make better purchasing decisions. Fragmented spreadsheets and status updates make this difficult.
+An independent, fictional prototype exploring how construction procurement teams could create purchase orders, monitor deliveries, compare suppliers and investigate pricing anomalies. **Not affiliated with ArisInfra.** All names, order records and prices are synthetic.
 
-## Product concept
-BuildFlow combines an interactive procurement dashboard, supplier/order insights, and configurable at-risk delivery flags. All example data are **synthetic**; metrics are demonstrations, not real business outcomes.
+## Why this product?
+Procurement coordinators working across multiple construction sites may struggle to track supplier commitments and identify overdue materials across fragmented systems. BuildFlow explores an exception-first workflow, with a product specification, prioritization decisions and testable metrics. The problem hypotheses have **not yet been validated by interviews**.
 
-## Run locally
+## Features
+- **Command centre:** spend, order volume, active overdue orders, historical late deliveries, on-time performance and material breakdowns
+- **Order operations:** create purchase orders, update statuses, add follow-up notes, export filtered records
+- **Supplier comparison:** estimated cost from historical median prices alongside completed-delivery reliability
+- **Price intelligence:** adjustable, explainable material-median deviation alerts
+- **Product insights:** documented hypotheses and local demo interaction events
+- **300 deterministic synthetic orders** generated at app startup; optional CSV import
+- **Automated Python tests** and GitHub Actions CI
+
+> Updates are held in Streamlit session state and are **not persisted**. This is a prototype, not a production procurement system.
+
+## Quick start
 ```bash
+git clone https://github.com/chiranthvreddy/BuildFlow-Procurement-Intelligence.git
+cd BuildFlow-Procurement-Intelligence
 python -m pip install -r requirements.txt
 streamlit run app/main.py
 ```
+Open the local address Streamlit prints (typically http://localhost:8501).
 
-## Repository guide
-- `app/main.py` — interactive Streamlit dashboard
-- `app/core.py` — reusable KPI and risk calculations
-- `app/generate_data.py` — reproducible synthetic-data generator
-- `data/sample_orders.csv` — example procurement orders
-- `tests/test_core.py` — automated tests
-- `docs/PRD.md` — product requirements and acceptance criteria
-- `docs/DISCOVERY.md` — user and problem discovery assumptions
-- `docs/METRICS.md` — product metrics specification
-- `docs/ROADMAP.md` — MVP roadmap and prioritization
-- `docs/QA_PLAN.md` — QA/UAT checklist
-- `docs/CASE_STUDY.md` — portfolio case study
+## Deploy on Streamlit Community Cloud
+1. Visit https://share.streamlit.io/ and sign in with GitHub.
+2. Select this repository, branch `main`, and entrypoint `app/main.py`.
+3. Deploy and add the generated public URL to the repository About section.
 
-## Scope and limitations
-A demonstration prototype, not a production application. There is no authentication, supplier integration, live logistics tracking, or validated customer research. Any usability testing and estimated impact must be performed before claiming measurable outcomes. Do not present synthetic results as observed customer results.
+A public deployment URL is **not yet verified**.
 
-## Portfolio positioning
-Product thinking (PRD, user stories, metric definition, prioritization), analytics (Python, pandas, Streamlit), and engineering collaboration (tests, acceptance criteria, QA).
+## Product documents
+| Artifact | Purpose |
+|---|---|
+| [PRD](docs/PRD.md) | User stories, MVP scope and acceptance criteria |
+| [Discovery](docs/DISCOVERY.md) | Proto-personas and research interview guide |
+| [Metrics](docs/METRICS.md) | KPI definitions and experiment design |
+| [Roadmap](docs/ROADMAP.md) | RICE prioritization and product trade-offs |
+| [QA plan](docs/QA_PLAN.md) | Manual UAT and release checks |
+| [Case study](docs/CASE_STUDY.md) | Problem, decisions, implementation and limitations |
+| [Architecture](docs/ARCHITECTURE.md) | System diagram and data flow |
+
+## Tests
+```bash
+python -m pytest -q
+```
+
+## Important limitations
+No authenticated accounts, real suppliers, actual customer research, payment processing, real ERP integration or persistent backend. Price alerts are deterministic statistical rules, **not machine learning**. Synthetic dashboard outcomes are not evidence of real-world impact. Manual usability testing and accessibility testing remain pending.
