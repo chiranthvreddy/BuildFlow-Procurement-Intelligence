@@ -11,7 +11,7 @@ from generate_data import generate_orders,MATERIALS,SUPPLIERS,SITES
 st.set_page_config(page_title="BuildFlow | Procurement Workspace",page_icon="🏗️",layout="wide")
 st.markdown("""<style>.block-container{padding-top:1.5rem;max-width:1450px}.hero{background:linear-gradient(120deg,#11233d,#1b6472);border-radius:18px;padding:25px 30px;color:white;margin-bottom:14px}.hero h1{color:white;margin:0;font-size:2.35rem}.hero p{color:#dceef4;margin:8px 0 0}.stMetric{background:#f1f5f9;padding:14px;border-radius:12px}</style>""",unsafe_allow_html=True)
 st.markdown('<div class="hero"><h1>BuildFlow</h1><p>Procurement command centre · Purchase orders, supplier intelligence and delivery exceptions</p></div>',unsafe_allow_html=True)
-st.caption("Independent portfolio prototype · All supplier names, orders and prices are synthetic · Not affiliated with ArisInfra")
+st.caption("Independent portfolio prototype · All supplier names, orders and prices are synthetic · Personal passion project · Fictional suppliers and sample orders")
 AS_OF = pd.Timestamp("2026-10-22")
 if "orders" not in st.session_state:
     st.session_state.orders = generate_orders(300,seed=42)
