@@ -1,34 +1,28 @@
-# BuildFlow — Product Management Portfolio Case Study
+# BuildFlow — Product Management Case Study
 
-## Thirty-second pitch
-BuildFlow is an independent B2B construction procurement prototype exploring how procurement teams could monitor supplier commitments and identify exceptions faster. I defined a hypothesized user problem, prioritized an MVP, documented functional requirements and metrics, and built a dashboard with testable logic using synthetic order records.
+## Overview
+BuildFlow is an independent construction procurement prototype designed to explore a B2B workflow: create a purchase order, monitor commitments, follow up on overdue orders, compare indicative supplier costs and investigate price outliers.
 
-## Context
-Construction procurement workflows can involve several sites, suppliers and materials. A coordinator may need to identify late deliveries and compare supplier performance before follow-up. These are plausible workflow challenges, not established findings from interviews.
+## Problem and discovery
+The assumed user is a procurement coordinator managing several construction sites. Pain points are hypotheses derived from the workflow, **not findings from completed interviews**. A discovery guide is provided in DISCOVERY.md.
 
-## Product decision
-Prioritize a read-only visibility layer before procurement transactions or generative AI features. The rationale: teams need consistent data and clear exception definitions before relying on advanced automation.
+## Product strategy
+An exception-first dashboard was chosen before complex forecasting because the most immediate proposed job is finding orders that need action. Order creation, status updates, supplier comparison and transparent price flags form the prototype workflow.
 
-## Shipped demonstration features
-- Interactive overview of volume, spend, delivery exceptions and average completed lead time.
-- Filtering by site, material and order status.
-- Inspectable order table with exception status and CSV export.
-- Supplier scorecard with spend, completed on-time rate and lead time.
-- Automated validation of order schema, dates and duplicates.
+## Key tradeoffs
+- Transparent median-based price anomaly flags over opaque AI claims.
+- Historical median unit price over simulated live supplier quotes.
+- Session-state prototype over backend deployment.
+- Separate overdue-open and late-delivered metrics so action queues don't include historical failures.
 
-## PM deliverables
-PRD with user stories and acceptance criteria; discovery plan; RICE scoring; roadmap; metric definitions; proposed experiment; UAT checklist.
+## Implementation
+Python, pandas, Streamlit, Plotly; deterministic synthetic data generator; unit tests and GitHub Actions workflow. Interactive features include order creation, status changes, local follow-up notes, supplier comparisons and exports.
 
-## Technical implementation
-Python, pandas, Streamlit and Plotly. Deterministic synthetic-data generator; isolated calculation functions; pytest unit tests.
+## Measurement plan
+Potential outcome: time to correctly identify critical overdue orders. Supporting metrics: completed on-time rate, overdue open count, supplier delivery reliability and workflow completion. An A/B or usability study is proposed but **not conducted**.
 
-## Evaluation and limitations
-Automated tests validate calculation logic. No actual customers, interviews, A/B test, production rollout, cost savings or measured improvements are claimed. Manual interface UAT remains to be completed.
+## Evidence status
+No real customer interviews, measured time savings, production deployment or experimental lift are claimed. Manual UAT and deployment verification are outstanding.
 
-## Suggested interview narrative
-1. Describe the user and the hypothesized problem.
-2. Explain why exception visibility won over AI forecasting in the MVP.
-3. Walk through a filter → exception → supplier comparison → export user journey.
-4. Explain denominators and edge cases behind supplier reliability.
-5. Discuss what discovery evidence and telemetry would be required before launch.
-6. Describe future opportunities and tradeoffs without overclaiming outcomes.
+## Interview discussion
+Explain why procurement visibility matters, why the MVP scope is limited, how median-based price alerts work, what data is needed for supplier scoring, and how real user feedback would change the roadmap.
