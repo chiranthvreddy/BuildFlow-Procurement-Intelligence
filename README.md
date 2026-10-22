@@ -1,6 +1,6 @@
 # BuildFlow — Construction Procurement Intelligence
 
-**Independent Product Management case study and working Streamlit prototype** for B2B construction-material procurement. This project is not affiliated with ArisInfra or any real construction supplier.
+**Independent Product Management case study and working Streamlit prototype** for B2B construction-material procurement. This project is not affiliated with any real construction supplier.
 
 ## Problem
 Construction procurement teams need to compare suppliers, monitor orders, identify delayed deliveries, and make better purchasing decisions. Fragmented spreadsheets and status updates make this difficult.
